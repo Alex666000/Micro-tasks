@@ -1,17 +1,26 @@
 import React from 'react';
 import './App.css';
-import {Header} from "./site/Header";
-import {Body} from "./site/Body";
-import {Footer} from "./site/Footer";
+import {NewComponent} from './site/NewComponent';
 
-function App() {
+const App = () => {
+/* 1)    const students = [
+        {id: 23, name: 'Alex', age: 34},
+        {id: 5, name: 'Mireh', age: 78},
+        {id: 666, name: 'Nut', age: 66},
+        {id: 777, name: 'Nut', age: 66},
+    ]*/
+
+    // 2):
+    const topCars = [
+        {manufacturer: 'BMW', model: 'm5cs'},
+        {manufacturer: 'Mercedes', model: 'e63s'},
+        {manufacturer: 'Audi', model: 'rs6'}
+    ]
     return (
         <>
-            <Header title={'New Header'}/>
-            <Body titleForBody={'New Body'}/>
-            <Footer titleForFooter={'New Footer'}/>
+            <NewComponent cars={topCars}/>
         </>
     );
-}
+};
 
 export default App;
